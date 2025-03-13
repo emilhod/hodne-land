@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // Enables static export
+  output: "export",
   images: {
-    unoptimized: true, // Fixes image issues with static export
+    unoptimized: true,
+  },
+  experimental: {
+    appDir: false, // Disable App Router (Azure Static Apps doesn't support it yet)
   },
 };
 
 module.exports = nextConfig;
-
