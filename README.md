@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emil Hodneland - Static Homepage
 
-## Getting Started
+This is a simple **static homepage** for **Emil Hodneland**, hosted at [hodne.land](https://hodne.land).
 
-First, run the development server:
+## 🚀 Project Overview
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Deployment:** Azure Static Web Apps
+- **Domain:** hodne.land
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📂 Project Structure
+```
+my-next-app/
+│── src/
+│   ├── app/
+│   │   ├── layout.tsx  # Root layout
+│   │   ├── page.tsx    # Homepage
+│   ├── styles/         # Tailwind CSS global styles
+│── public/             # Static assets
+│── next.config.js      # Next.js config
+│── tailwind.config.ts  # Tailwind CSS config
+│── tsconfig.json       # TypeScript config
+│── package.json        # Dependencies & scripts
+│── .eslintrc.json      # ESLint config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Setup & Development
+### **1️⃣ Install dependencies**
+```sh
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **2️⃣ Start the development server**
+```sh
+npm run dev
+```
+- The site will be available at **http://localhost:3000**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **3️⃣ Build for production**
+```sh
+npm run build && next export
+```
+- This generates a static site in the `out/` folder.
 
-## Learn More
+## 🚀 Deployment on Azure
+1. Push your code to GitHub.
+2. In [Azure Portal](https://portal.azure.com), create a **Static Web App**.
+3. Select **GitHub** as the deployment source.
+4. Choose **Build Preset: Next.js**.
+5. Azure will automatically deploy your site.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Live Website
+The site is available at **[hodne.land](https://hodne.land)**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💡 _This project is minimal and serves as a personal landing page for Emil Hodneland._
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
