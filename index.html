@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emil Hodneland</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #181818;
+            color: #ffffff;
+            text-align: center;
+            flex-direction: column;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+        a {
+            color: #ffffff;
+            background: #333;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+        }
+        a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>Emil Hodneland</h1>
+    <p>Welcome to <strong>hodne.land</strong></p>
+    <div class="links">
+        <a href="https://github.com/emilhod/" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/emil-hodneland/" target="_blank">LinkedIn</a>
+    </div>
+    <script>
+        document.body.addEventListener("mousemove", (event) => {
+            const x = event.clientX / window.innerWidth - 0.5;
+            const y = event.clientY / window.innerHeight - 0.5;
+            document.body.style.background = `radial-gradient(circle at ${event.clientX}px ${event.clientY}px, rgba(255, 255, 255, 0.1), #181818)`;
+        });
+    </script>
+</body>
+</html>
